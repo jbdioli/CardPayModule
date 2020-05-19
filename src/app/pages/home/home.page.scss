@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ion-toolbar {
+    --background: #3178bd;
+    color: white;
+
+}
+ion-content {
+    padding: 20px;
+    --background: #e6e6e6;
+}
+
+ion-input {
+    height: 25px;
+    // border: 1px solid black; // to see for test
+}
+
+ion-row {
+    margin-bottom: 10px;
+}
+
+ion-item {
+    --background: transparent;
+}
+ion-label {
+    size: 8px;
+    color: #5f5f5f;
+}
+
+ion-button {
+    padding: 0;
+    
+    --background: #4686c6;
+    --background-activated: #4697c6;
+}

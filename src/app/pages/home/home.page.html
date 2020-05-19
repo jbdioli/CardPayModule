@@ -1,9 +1,58 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Pay form model</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="payForm" (ngSubmit)="onPay()">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Card Number</ion-label>
+          <ion-item>
+            <ion-input type="number" placeholder="xxxx-xxxxxx-xxxxx" formControlName="cardNumber"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
 
+      <ion-row>
+        <ion-col>
+          <ion-label>Expiry Date</ion-label>
+          <ion-item>
+            <ion-datetime display-format="MMM YYYY" [min]="today" max="2050" placeholder="mm - yyyy"
+            formControlName="expiryDate"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-label>CVV</ion-label>
+          <ion-item >
+            <ion-input type="number" placeholder="xxx" formControlName="cvv"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label>Card Holder</ion-label>
+          <ion-item>
+            <ion-input type="text" placeholder="First Name Last Name" formControlName="cardHolder"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <ion-label>
+            <ion-icon style="color: green;" name="lock-closed-outline"></ion-icon>
+            Secure credit card payment
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button expand="full" type="submit" [disabled]="payForm.invalid">
+      PAY NOW
+      <ion-ripple-effect></ion-ripple-effect>
+    </ion-button>
+  </form>
 </ion-content>
