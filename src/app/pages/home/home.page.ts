@@ -36,6 +36,7 @@ export class HomePage implements OnInit {
   }
 
   onPay() {
+    console.log('PayForm Values: ', this.payForm.value);
 
   }
 }
