@@ -9,8 +9,8 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-label>Card Number</ion-label>
           <ion-item>
+            <ion-label position="stacked">Card Number</ion-label>
             <ion-input type="number" placeholder="xxxx-xxxxxx-xxxxx" formControlName="cardNumber"></ion-input>
           </ion-item>
         </ion-col>
@@ -18,15 +18,16 @@
 
       <ion-row>
         <ion-col style="border-right: 1px solid #00000029;">
-          <ion-label>Expiry Date</ion-label>
           <ion-item>
+            <ion-label position="stacked">Expiry Date</ion-label>
             <ion-datetime display-format="MMM YYYY" [min]="today" max="2050" placeholder="mm - yyyy"
             formControlName="expiryDate"></ion-datetime>
           </ion-item>
         </ion-col>
         <ion-col>
-          <ion-label>CVV</ion-label>
+          
           <ion-item >
+            <ion-label position="stacked">CVV</ion-label>
             <ion-input type="number" placeholder="xxx" formControlName="cvv"></ion-input>
           </ion-item>
         </ion-col>
@@ -34,8 +35,8 @@
 
       <ion-row>
         <ion-col>
-          <ion-label>Card Holder</ion-label>
           <ion-item>
+            <ion-label position="stacked">Card Holder</ion-label>
             <ion-input type="text" placeholder="First Name Last Name" formControlName="cardHolder"></ion-input>
           </ion-item>
         </ion-col>
