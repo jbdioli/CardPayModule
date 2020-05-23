@@ -12,6 +12,7 @@ export class HomePage implements OnInit {
 
   theDate = new Date();
   today: string;
+  yearMax: string;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -24,6 +25,7 @@ export class HomePage implements OnInit {
     const yyyy = this.theDate.getFullYear();
 
     this.today = yyyy + '-' + mm;
+    this.yearMax = (yyyy + 4).toString();
   }
 
   initPayForm() {

@@ -21,7 +21,7 @@
         <ion-col>
           <ion-list>
             <ion-label>Expiry Date</ion-label>
-            <ion-datetime display-format="MMM YYYY" [min]="today" max="2050"
+            <ion-datetime display-format="MMM YYYY" [min]="today" [max]="yearMax"
               placeholder="mm - yyyy" formControlName="expiryDate"></ion-datetime>
           </ion-list>
         </ion-col>
