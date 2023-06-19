@@ -65,6 +65,8 @@ ion-label {
 ion-button {
     margin-top: 50px;
     padding: 0;
+    --padding-start: 0px;
+    --padding-end: 0px;
     
     --background: #4686c6;
     --background-activated: #4697c6;

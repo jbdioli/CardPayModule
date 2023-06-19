@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -28,12 +28,13 @@ export class HomePage implements OnInit {
     this.yearMax = (yyyy + 4).toString();
   }
 
+
   initPayForm() {
     this.payForm = this.formBuilder.group({
-      cardNumber: '',
-      expiryDate: '',
-      cvv: '',
-      cardHolder: '',
+      cardNumber: ['', [Validators.required, Validators.minLength(15), Validators.maxLength(15)]],
+      expiryDate: ['', [Validators.required]],
+      cvv: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(3), Validators.pattern('^[0-9]{3}$')]],
+      cardHolder: ['', [Validators.required]],
     });
   }
 
